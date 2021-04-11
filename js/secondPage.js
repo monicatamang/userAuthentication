@@ -21,19 +21,26 @@ function getColoursSuccess(res) {
     // Storing the returned array into a variable
     let colours = res.data.data;
 
-    // Printing each colour's name, year and colour from the given JS object
+    // Getting the container that will contain the returned array and printing the colour and it's attributes to the user
     let coloursContainer = document.getElementById(`coloursContainer`);
     for (let i = 0; i < colours.length; i++) {
-        coloursContainer.innerHTML += `<p>${colours.[i].name}</p>
-        <p>${colours.[i].year}</p>`;
+
+        // Grouping each the colour's name, year and hex code
+        let colourCard = document.createElement(`article`);
+        colourCard.classList.add(`colourCard`);
+        colourCard.innerHTML += `<p>${colours[i].name}</p>
+        <p>${colours[i].year}</p>`;
 
         // Creating a div, setting it's dimensions and background colour to be displayed on the screen
         // The background colour set to correspond with the colour title
         let colourBox = document.createElement(`div`);
-        colourBox.style.width = `200px`;
-        colourBox.style.height = `200px`;
-        colourBox.style.background = `${colours.[i].color}`;
-        coloursContainer.append(colourBox);
+        colourBox.style.width = `100px`;
+        colourBox.style.height = `100px`;
+        colourBox.style.background = `${colours[i].color}`;
+        colourCard.append(colourBox);
+
+        // Appending all colour cards to the main container
+        coloursContainer.append(colourCard);
     }
 
     // Storing the user's token as a variable
@@ -41,10 +48,11 @@ function getColoursSuccess(res) {
 
     // If the user's token does not exist, print a message to the user prompting them to go back to the login page and create a button that takes them to the login page
     if (userToken === undefined) {
-        coloursContainer.innerHTML = `You are not logged in. Please go back to the login page.`;
+        coloursContainer.innerHTML = `<p>You are not logged in. Please go back to the login page.</p>
+        <button id="backToLoginPageButton">Back to Login Page</button>`;
 
-        let backToLoginPageButton = `<a href="/index.html"><button>Back to Login Page</button></a>`;
-        coloursContainer.innerHTML += backToLoginPageButton;
+        // Styling the container to have an inherit property or in other words, styling the container to has no gridTemplateColumns property as it is inherited from its parent container which has no gridTemplateColumns property
+        coloursContainer.style.gridTemplateColumns = `inherit`;
     }
 }
 

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <header>
@@ -12,16 +13,17 @@
     </header>
     <main>
         <form action="javascript:void(0)">
-            <p>Email</p>
+            <label for="emailInput" >Email</label>
             <input type="text" id="emailInput">
-            <p>Password</p>
+            <label for="passwordInput">Password</label>
             <input type="password" id="passwordInput">
-            <br>
-            <br>
             <input type="submit" value="Login" id="loginButton">
         </form>
         <p id="loginStatus"></p>
     </main>
+    <footer>
+        <p>Copyright &copy; 2021 Colour Palettes</p>
+    </footer>
 
     <script src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js'></script>

@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 100vw;
+  font-family: "Merriweather", serif;
+  background: whitesmoke;
+}
+
+footer {
+  margin: 5vh 0vh;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  margin: 10vh 0vh;
+  text-align: center;
+}
+
+main {
+  row-gap: 20px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin-top: 10vh;
+  text-align: center;
+}
+
+main form {
+  row-gap: 20px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+main form label {
+  font-size: 1.2rem;
+}
+
+main form input {
+  width: 20vw;
+  padding: 3%;
+  background: white;
+  border: none;
+  -webkit-box-shadow: 1px 1px 5px lightgrey;
+          box-shadow: 1px 1px 5px lightgrey;
+}
+
+main form input:focus {
+  outline: none;
+}
+
+main form #loginButton {
+  width: 10vw;
+  font-family: "Merriweather", serif;
+  border: none;
+  background: white;
+  -webkit-box-shadow: 1px 1px 5px lightgrey;
+          box-shadow: 1px 1px 5px lightgrey;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 10vh 0vh;
+}
+
+main form #loginButton:focus {
+  outline: none;
+}
+
+main form #loginButton:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+main > p {
+  margin-top: -5vh;
+}
+/*# sourceMappingURL=style.css.map */

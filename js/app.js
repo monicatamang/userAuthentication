@@ -45,7 +45,7 @@ function userLoginSuccess(res) {
 
 // Creating a function that takes the user to the second page
 function changePage() {
-    window.location = "/pages/secondPage.html";
+    window.location = `/pages/secondPage.html`;
 }
 
 // Adding a click event to the login button and calling the loginUser function

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+$titleFont: 'Merriweather', serif;
+$bodyFont: 'Open Sans', sans-serif;
+
+@mixin displayGridCenter($rowGap) {
+    row-gap: $rowGap;
+    display: grid;
+    place-items: center;
+}
+
+@mixin buttonStyle($width) {
+    width: $width;
+    font-family: $titleFont;
+    border: none;
+    background: white;
+    box-shadow: 1px 1px 5px lightgrey;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 100vw;
+    font-family: $titleFont;
+    background: whitesmoke;
+}
+
+footer {
+    margin: 5vh 0vh;
+    text-align: center;
+    font-family: $bodyFont;
+}

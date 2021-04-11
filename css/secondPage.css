@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 100vw;
+  font-family: "Merriweather", serif;
+  background: whitesmoke;
+}
+
+footer {
+  margin: 5vh 0vh;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  row-gap: 0px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
+  padding: 5vh 0vh;
+  background: whitesmoke;
+  -webkit-box-shadow: 1px 1px 5px lightgrey;
+          box-shadow: 1px 1px 5px lightgrey;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+header > h1 {
+  font-size: 1.3rem;
+}
+
+header > a button {
+  width: 100%;
+  font-family: "Merriweather", serif;
+  border: none;
+  background: white;
+  -webkit-box-shadow: 1px 1px 5px lightgrey;
+          box-shadow: 1px 1px 5px lightgrey;
+  cursor: pointer;
+  padding: 1vh 2vh;
+}
+
+header > a button:focus {
+  outline: none;
+}
+
+header > a button:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+main {
+  margin-top: 25vh;
+  text-align: center;
+}
+
+main > p {
+  font-size: 3rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+
+main #coloursContainer {
+  row-gap: 50px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  margin: 15vh 0vh;
+}
+
+main #coloursContainer .colourCard {
+  row-gap: 15px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+main #coloursContainer .colourCard p {
+  text-transform: capitalize;
+}
+
+main #coloursContainer .colourCard > div {
+  border-radius: 5px;
+}
+
+main #coloursContainer #backToLoginPageButton {
+  width: 13vw;
+  font-family: "Merriweather", serif;
+  border: none;
+  background: white;
+  -webkit-box-shadow: 1px 1px 5px lightgrey;
+          box-shadow: 1px 1px 5px lightgrey;
+  cursor: pointer;
+  padding: 2vh;
+}
+
+main #coloursContainer #backToLoginPageButton:focus {
+  outline: none;
+}
+
+main #coloursContainer #backToLoginPageButton:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+/*# sourceMappingURL=secondPage.css.map */

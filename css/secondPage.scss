@@ -1,0 +1,58 @@
+@import "../css/globals";
+
+header {
+    @include displayGridCenter(0px);
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 5vh 0vh;
+    background: whitesmoke;
+    box-shadow: 1px 1px 5px lightgrey;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+
+    >h1 {
+        font-size: 1.3rem;
+    }
+
+    >a {
+        
+        button {
+            @include buttonStyle(100%);
+            padding: 1vh 2vh;
+        }
+    }
+}
+
+main {
+    margin-top: 25vh;
+    text-align: center;
+
+    >p {
+        font-size: 3rem;
+        font-family: $bodyFont;
+        font-weight: bold;
+    }
+
+    #coloursContainer {
+        @include displayGridCenter(50px);
+        grid-template-columns: auto auto auto;
+        margin: 15vh 0vh;
+
+        .colourCard {
+            @include displayGridCenter(15px);
+    
+            p {
+                text-transform: capitalize;
+            }
+    
+            >div {
+                border-radius: 5px;
+            }
+        }
+
+        #backToLoginPageButton {
+            @include buttonStyle(13vw);
+            padding: 2vh;
+        }
+    }
+}
