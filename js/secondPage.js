@@ -21,18 +21,20 @@ function getColoursSuccess(res) {
     // Storing the returned array into a variable
     let colours = res.data.data;
 
-    // Getting the container that will contain the returned array and printing the colour and it's attributes to the user
+    // Getting the container that will contain the returned array
     let coloursContainer = document.getElementById(`coloursContainer`);
+
+    // Printing the colours and it's attributes to the user
     for (let i = 0; i < colours.length; i++) {
 
-        // Grouping each the colour's name, year and hex code
+        // Grouping each the colour's name, year and hex code, adding a class of colourCard to article
         let colourCard = document.createElement(`article`);
         colourCard.classList.add(`colourCard`);
         colourCard.innerHTML += `<p>${colours[i].name}</p>
         <p>${colours[i].year}</p>`;
 
         // Creating a div, setting it's dimensions and background colour to be displayed on the screen
-        // The background colour set to correspond with the colour title
+        // The background colour is set to correspond with the colour title
         let colourBox = document.createElement(`div`);
         colourBox.style.width = `100px`;
         colourBox.style.height = `100px`;
@@ -49,9 +51,9 @@ function getColoursSuccess(res) {
     // If the user's token does not exist, print a message to the user prompting them to go back to the login page and create a button that takes them to the login page
     if (userToken === undefined) {
         coloursContainer.innerHTML = `<p>You are not logged in. Please go back to the login page.</p>
-        <button id="backToLoginPageButton">Back to Login Page</button>`;
+        <a href="/index.html"><button id="backToLoginPageButton">Back to Login Page</button></a>`;
 
-        // Styling the container to have an inherit property or in other words, styling the container to has no gridTemplateColumns property as it is inherited from its parent container which has no gridTemplateColumns property
+        // Styling the container to have an inherit property or in other words, styling the container to have no gridTemplateColumns property as it is inherited from its parent container which has no gridTemplateColumns property
         coloursContainer.style.gridTemplateColumns = `inherit`;
     }
 }

@@ -4,9 +4,9 @@ function loginUser(e) {
     // Printing a loading message to the user
     document.getElementById(`loginStatus`).innerText = `Verifying Credentials`;
 
-    // When the login button is clicked, configure a request with the type, url, data format, and parameters being the input values the user enters for their email and password
-    // If the page doesn't fail, the userLoginSuccess function is called
-    // If the page fails, the userLoginFailure function is called
+    // When the login button is clicked, configure the request with the type, url, data format, and parameters being the input values the user enters for their email and password
+    // If the page doesn't fail, call the userLoginSuccess function
+    // If the page fails, call the userLoginFailure function
     axios.request({
         method: `POST`,
         url: `https://reqres.in/api/login`,
@@ -20,10 +20,8 @@ function loginUser(e) {
     }).then(userLoginSuccess).catch(userLoginFailure);
 }
 
-// Creating a function that is called when the page errors 
+// Creating a function that is called when the page errors, printing an error message to the user
 function userLoginFailure(err) {
-
-    // Printing an error message to the user
     document.getElementById(`loginStatus`).innerText = `Email or password is invalid. Please try again.`;
 }
 
